@@ -39,22 +39,26 @@ npm install
 3. Configure environment variables:
 Create a `.env` file in the root directory with the following variables:
 ```env
-# AWS Configuration
-AWS_ACCESS_KEY_ID=your_access_key
-AWS_SECRET_ACCESS_KEY=your_secret_key
-AWS_REGION=your_region
-AWS_S3_BUCKET=your_bucket_name
-AWS_CLOUDFRONT_DISTRIBUTION_ID=your_distribution_id
+# Server Configuration
+PORT=3000
+BASE_URL=http://localhost:3000
 
 # MongoDB Configuration
-MONGODB_URI=your_mongodb_uri
+DB_CONNECTION_STRING=your_mongodb_connection_string
+
+# AWS Configuration
+S3_BUCKET_NAME=your_bucket_name
+S3_BUCKET_REGION=ap-south-1
+AWS_ACCESS_KEY=your_aws_access_key
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+AWS_CLOUDFRONT_DOMAIN=your_cloudfront_domain
+CLOUDFRONT_DISTRIBUTION_ID=your_distribution_id
 
 # RabbitMQ Configuration
 RABBITMQ_URL=your_rabbitmq_url
-
-# Server Configuration
-PORT=3000
 ```
+
+> ⚠️ **Security Note**: Never commit your actual `.env` file or expose sensitive credentials in your repository. The above values are placeholders - replace them with your actual credentials when deploying.
 
 ## Scripts
 
